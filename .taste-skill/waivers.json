@@ -1,0 +1,22 @@
+[
+  {
+    "check": "nav",
+    "target": "a.roll-link:nth-of-type(1)",
+    "reason": "Roll Links uses two copies of each letter inside an overflow-hidden drum. Only one copy is visible; the navigation does not wrap. Retained from the user's DesignBookmark reference."
+  },
+  {
+    "check": "nav",
+    "target": "a.roll-link:nth-of-type(2)",
+    "reason": "The second letter row is the clipped hover state of Roll Links, not a second visible navigation line. Confirmed in the desktop screenshot."
+  },
+  {
+    "check": "nav",
+    "target": "a.roll-link:nth-of-type(3)",
+    "reason": "The repeated letters implement the requested Roll Links effect and are clipped to one line. The link has one accessible name."
+  },
+  {
+    "check": "hero-enter",
+    "target": "main#main > section.hero",
+    "reason": "The existing Next.js page uses CSS hero-enter with staggered delays and prefers-reduced-motion, rather than the skill's m-enter head script. The entrance is implemented without hiding server-rendered content permanently."
+  }
+]

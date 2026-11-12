@@ -1,0 +1,240 @@
+gate: checking http://127.0.0.1:3001/ (product); this takes a few minutes on a CPU Chrome
+gate: 77 FAIL open
+  FAIL scroll-reveal    main#main > section.section.wrap:nth-of-type(2) > div.service-bento > a.service-card.servi  [1440, 390]
+       starts "color" (0.3 s) the moment it is scrolled into view (an IntersectionObserver) on span.circle-arrow
+       fix: show it at rest: no fade, rise or unmask when it is scrolled into view
+  FAIL scroll-reveal    main#main > section.section.wrap:nth-of-type(2) > div.service-bento > a.service-card.servi  [1440, 390]
+       starts "color" (0.3 s) the moment it is scrolled into view (an IntersectionObserver) on span.circle-arrow
+       fix: show it at rest: no fade, rise or unmask when it is scrolled into view
+  FAIL scroll-reveal    main#main > section.section.wrap:nth-of-type(2) > div.service-bento > a.service-card.servi  [1440, 390]
+       starts "color" (0.3 s) the moment it is scrolled into view (an IntersectionObserver) on span.circle-arrow
+       fix: show it at rest: no fade, rise or unmask when it is scrolled into view
+  FAIL scroll-reveal    main#main > section.section.wrap:nth-of-type(2) > div.service-bento > a.service-card.servi  [1440, 390]
+       starts "color" (0.3 s) the moment it is scrolled into view (an IntersectionObserver) on span.circle-arrow
+       fix: show it at rest: no fade, rise or unmask when it is scrolled into view
+  FAIL scroll-reveal    main#main > section.section.wrap:nth-of-type(2) > div.service-bento > a.service-card.servi  [1440, 390]
+       starts "color" (0.3 s) the moment it is scrolled into view (an IntersectionObserver) on span.circle-arrow
+       fix: show it at rest: no fade, rise or unmask when it is scrolled into view
+  FAIL scroll-reveal    main#main > section.section.wrap:nth-of-type(2) > div.service-bento > a.service-card.servi  [1440, 390]
+       starts "color" (0.3 s) the moment it is scrolled into view (an IntersectionObserver) on span.circle-arrow
+       fix: show it at rest: no fade, rise or unmask when it is scrolled into view
+  FAIL scroll-reveal    main#main > section.section.wrap:nth-of-type(2) > div.service-bento > a.service-card.servi  [1440, 390]
+       starts "color" (0.3 s) the moment it is scrolled into view (an IntersectionObserver) on span.circle-arrow
+       fix: show it at rest: no fade, rise or unmask when it is scrolled into view
+  FAIL no-visual        main#main > section.on-paper.section:nth-of-type(3) "Стоимость вашей мебели."  [1440, 390]
+       no picture, effect or mock in this section; a feature section needs a visual
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL no-visual        main#main > section.section.wrap:nth-of-type(5) "От идеи до последнего штриха"  [1440, 390]
+       no picture, effect or mock in this section; a feature section needs a visual
+       fix: give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits
+  FAIL text-only        main#main > section.section.wrap:nth-of-type(7) "Отзывы о мебели."  [1440, 390]
+       the quote section is only text: no picture, icon, mock or effect in it (2 sections like it at this width)
+       fix: give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground
+  FAIL text-only        main#main > section.section.wrap:nth-of-type(8) "Остались вопросы?"  [1440, 390]
+       the closing section is only text: no picture, icon, mock or effect in it (2 sections like it at this width)
+       fix: give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground
+  FAIL section-gaps     main#main > section.hero / main#main > div.materials-strip  [1440, 390]
+       26px between these sections, -84% against the median 163px
+       fix: use one gap between sections (all within 25% of each other)
+  FAIL photo-repeat     div.service-bento > a.service-card.service-0 > div.photo > img "image"  [1440, 390]
+       the photograph image is shown 12 times on the page: a picture the visitor has already seen
+       fix: show each view of the product once: the hero side, the product section three-quarter, the use scene, the parts as close-ups or the exploded view, the order rear-quarter
+  FAIL section-tile     main#main > section.section.wrap:nth-of-type(2) "Мебель для каждой комнаты."  [1440]
+       the section is 1044px tall (1.16 screens at 1440x900), not one screen or two: the screen one screen on from its top (scroll 1871px) shows 144px of it and 629px of the next section, its heading "Стоимость вашей мебели." o
+       fix: set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb
+  FAIL section-tile     main#main > section.on-paper.section:nth-of-type(3) "Стоимость вашей мебели."  [1440]
+       the section is 629px tall (0.70 screens at 1440x900), shorter than the screen: its tile (the screen from its top) shows 629px of it and 271px of the next section, its heading "Проект начинается с ваших прив" on screen
+       fix: set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb
+  FAIL moment-none      (the page)  [1440]
+       a product page (--type) deals no moment: every kind carries one, two on a long page (moments.md)
+       fix: deal one (moments.mjs pick --page product --photo) and mount it in its own section
+  FAIL section-height   main#main > div.materials-strip "Натуральный шпонМДФ и эмальФурнитура Blu"  [1440]
+       the section is 71px tall (0.1 screens), 829px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-height   footer.footer "FURNISTYLEПродумано для жизни.Создано дл"  [1440]
+       the section is 471px tall (0.5 screens), 429px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)
+       fix: set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit
+  FAIL section-air      main#main > section.about-section.wrap > div.stats "12+лет на рынке*850+проектов*3года гар  [1440]
+       a top border across 100% of the container, between the section's content: sections and their parts are told apart by air and ground, not lines (SR-3)
+       fix: take the rule out: sections and their parts are parted by their ground and the air between them
+  FAIL one-section      main#main > section.section.wrap:nth-of-type(8) "Остались вопросы?Как формируется цена?+Ц"  [1440]
+       the screen at scroll 6172px (the top of section 10) shows 430px of section 9 and the content of 2 sections, over 24px each beside section 10: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-section      section.portfolio-section.on-paper > div.wrap > div.section-title > h2 "Интерьеры и решени  [1440]
+       the screen at scroll 3600px (stride 4) shows 413px of section 7 and the heading of section 7 whole and the content of 2 sections, over 24px each beside section 6: a screen shows one section (another may peek 8px, 24px WA
+       fix: make each section exactly one screen or two, so a screen shows one section and no neighbour peeks
+  FAIL one-heading      div#lead > h2 "Обсудимваш проект."  [1440]
+       the section holds 2 h2 headings: one per section, first in its .wrap (SR-5)
+       fix: give each section one h2, first in its .wrap, and the hero only its h1
+  FAIL one-heading      main#main > section.about-section.wrap > div.about-copy > h2 "Проект начинаетсяс ваших при  [1440]
+       headings of two sections show whole on one screen at 14 of 124 scroll positions (11.3%; at scroll 2100, 3350, 3400, 3450px), here with "Стоимостьвашей мебели.": at most 3% on a desktop (SR-5)
+       fix: make the sections one screen tall so their headings sit a screen apart and two never share one
+  FAIL container-edges  main#main > div.materials-strip "Натуральный шпонМДФ и эмальФурнитура Blu"  [1440]
+       the content of section 2 runs 0px from the left and 0px from the right (read from its outermost blocks: no .wrap): the page's container starts at 56px; the margin is 64-120px at 1440px (one container, equal margins, 2px
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges  header.header "FURNISTYLEМЕБЕЛЬ С ВАШИМ ХАРАКТЕРОМНапра"  [1440]
+       the nav's content runs 56px from the left and 56px from the right (read from its outermost blocks: no .wrap): the margin is 64-120px at 1440px (one container, equal margins, 2px either way) (and 9 more like it: "Мебельна
+       fix: use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone
+  FAIL container-edges  a.skip-link "К содержимому"  [1440]
+       a <a> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)
+       fix: build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing
+  FAIL container-edges  main#main > section.hero > div.photo.hero-photo  [1440]
+       a box runs 0-1440px, outside the container lines of section 1 at 56-1384px: full width is for background layers and grounds only (SR-6)
+       fix: keep it inside the container lines (.wrap): full width is for background layers and grounds only
+  FAIL container-edges  main#main > section.hero > div.hero-shade  [1440]
+       a box runs 0-1440px, outside the container lines of section 1 at 56-1384px: full width is for background layers and grounds only (SR-6)
+       fix: keep it inside the container lines (.wrap): full width is for background layers and grounds only
+  FAIL container-edges  div#lead > h2 "Обсудимваш проект."  [1440]
+       the h2 starts 742px right of the container's left: every h1 and h2 starts on it, 2px either way (and 2 more like it: x -46, x 81) (SR-6)
+       fix: start the text on the container's left, or on the one split line every split shares
+  FAIL container-edges  div.wrap > div.selected-projects > a.selected-project.project-0 > div.photo  [1440]
+       a box over half the container wide runs 56-812px, not on the container's lines at 56-1384px (and 2 more like it: main#main > section.hero > div.photo.hero-photo, main#main > section.hero > div.hero-shade) (SR-6)
+       fix: run the picture or box from the container's left line to its right line, or put it in a row or a split
+  FAIL row-lines        main#main > div.materials-strip "Натуральный шпонМДФ и эмальФурнитура Blu"  [1440]
+       a clipped carousel: 1 item cut at rest (SR-7)
+       fix: show every item inside the container, or stack them: no sideways scroller, no half-cut carousel
+  FAIL split-pair       main#main > section.on-paper.section:nth-of-type(3) > div.wrap.quick-layout "Стоимостьваше  [1440]
+       the split's columns are off the page's one pair of lines: its right column starts at x 672, on none of the split lines 619 (k=5), 732 (k=6), 845 (k=7) (SR-8)
+       fix: start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it
+  FAIL marquee          main#main > div.materials-strip > div.marquee-track "Натуральный шпон МДФ и эмаль Фурнитур  [390]
+       a running line of text, cut mid-word at the edge of the screen in every still
+       fix: drop the running line, or set it as full words that fit the screen
+  FAIL scroll-reveal    section.on-paper.section:nth-of-type(3) > div.wrap.quick-layout > div:nth-of-type(1) > a.t  [390]
+       starts "color" (0.2 s) the moment it is scrolled into view (an IntersectionObserver)
+       fix: show it at rest: no fade, rise or unmask when it is scrolled into view
+  FAIL heading-scale    section.about-section.wrap > div.stats > div:nth-of-type(1) > strong "12+"  [390]
+       the figure "12+" is set at 48px, larger than the section headings (h2 43px); 4 more like it
+       fix: set figures at the h2 size or under: a stat reads as data, not as the heading
+  FAIL photo-upscale    main#main > section.hero > div.photo.hero-photo > img "img: Современная кухня с деревянным  [390]
+       image: 390x260 shown at 390x772, blown up 2.97x
+       fix: use a source at least as wide as the picture is shown (twice that for sharp screens)
+  FAIL photo-upscale    div.parallax > div > div.photo > img "img: Тёплые натуральные материалы в совр"  [390]
+       image: 390x260 shown at 350x462, blown up 1.78x
+       fix: use a source at least as wide as the picture is shown (twice that for sharp screens)
+  FAIL collide          div.materials-strip > div.marquee-track > div:nth-of-type(1) > span:nth-of-type(2) "МДФ и   [320]
+       the words "МДФ и эмаль" lie over "Приостановить строку": two lines in one place
+       fix: on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons;
+  FAIL collide          div.materials-strip > div.marquee-track > div:nth-of-type(1) > span:nth-of-type(3) "Фурнит  [320]
+       the words "Фурнитура Blum" lie over "Приостановить строку": two lines in one place
+       fix: on a phone nothing lies on anything else: let the section grow with its content (min-height for its screens, never a fixed height; --hm: 2 when it needs two) or cut what it holds; keep pictures and cards off the buttons;
+  FAIL edge-left        section.section.wrap h3 "Кухни на заказ"  [1440, 390]
+       starts at x 81; the lines are 56 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.section.wrap h3 "Шкафы на заказ"  [1440, 390]
+       starts at x 754; the lines are 56 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.section.wrap h3 "Спальни"  [1440, 390]
+       starts at x 1090.5; the lines are 56 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.section.wrap h3 "Гостиные"  [1440, 390]
+       starts at x 81; the lines are 56 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.section.wrap h3 "Прихожие"  [1440, 390]
+       starts at x 417.5; the lines are 56 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.section.wrap h3 "Детская"  [1440, 390]
+       starts at x 754; the lines are 56 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.section.wrap h3 "Офисная мебель"  [1440, 390]
+       starts at x 1090.5; the lines are 56 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.on-paper.section div.quick-calc "01Изделие02Размер03ОтделкаЧто бу"  [1440]
+       starts at x 672.1; the lines are 56 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.section.wrap h3 "Замер и проект"  [1440]
+       starts at x 398; the lines are 56 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.section.wrap p "Снимем размеры, подберём материа"  [1440]
+       starts at x 398; the lines are 56 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.section.wrap h3 "Производство"  [1440]
+       starts at x 740; the lines are 56 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.section.wrap p "Изготовим детали и проверим каче"  [1440]
+       starts at x 740; the lines are 56 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.section.wrap h3 "Монтаж"  [1440]
+       starts at x 1082; the lines are 56 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.section.wrap p "Соберём мебель, настроим фурниту"  [1440]
+       starts at x 1082; the lines are 56 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        section.section.wrap figure "“Удалось использовать узкую нишу"  [1440]
+       starts at x 770; the lines are 56 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        footer.footer div "НаправленияКухни на заказШкафы н"  [1440]
+       starts at x 481; the lines are 56 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        footer.footer div "ФабрикаО насНаши работыКалькулят"  [1440]
+       starts at x 800.4; the lines are 56 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        footer.footer div "На связи+998 (71) 000-00-00Пн–Сб"  [1440]
+       starts at x 1066.8; the lines are 56 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        footer.footer a "Политика конфиденциальности"  [1440, 390]
+       starts at x 296.4; the lines are 56 and the column starts
+       fix: start it on the .wrap left line
+  FAIL edge-left        footer.footer p "Демонстрационный проект. Цены, к"  [1440]
+       starts at x 624; the lines are 56 and the column starts
+       fix: start it on the .wrap left line
+  FAIL screen-short     section.hero section.hero "Мебельная фабрика · ТашкентМебел"  [1440, 390]
+       820px tall; one screen under the nav is 900px
+       fix: make the section one full screen (--h: 1, layout-v4.md section 2)
+  FAIL screen-height    section.section.wrap section.section.wrap "Мебельдля каждой комнаты.Все нап"  [1440, 390]
+       1044px, 1.16 screens; a section is exactly one or two (--h)
+       fix: make the section exactly one or two screens (--h: 1 or 2)
+  FAIL screen-short     section.on-paper.section section.on-paper.section "Стоимостьвашей мебели.Три просты"  [1440]
+       629px tall; one screen under the nav is 900px
+       fix: make the section one full screen (--h: 1, layout-v4.md section 2)
+  FAIL screen-height    section.on-paper.section section.on-paper.section "Стоимостьвашей мебели.Три просты"  [1440]
+       629px, 0.70 screens; a section is exactly one or two (--h)
+       fix: make the section exactly one or two screens (--h: 1 or 2)
+  FAIL neighbour        section.on-paper.section section.on-paper.section "Стоимостьвашей мебели.Три просты"  [1440]
+       framed, 171px of section.about-section.wrap section.about-section.wrap "Проект начинаетсяс ваших привыче" shows
+       fix: keep the next section's heading and picture out of this screen
+  FAIL screen-height    section.about-section.wrap section.about-section.wrap "Проект начинаетсяс ваших привыче"  [1440]
+       924px, 1.03 screens; a section is exactly one or two (--h)
+       fix: make the section exactly one or two screens (--h: 1 or 2)
+  FAIL screen-short     section.section.wrap section.section.wrap "От идеи до последнего штриха01Зн"  [1440, 390]
+       519px tall; one screen under the nav is 900px
+       fix: make the section one full screen (--h: 1, layout-v4.md section 2)
+  FAIL screen-height    section.section.wrap section.section.wrap "От идеи до последнего штриха01Зн"  [1440, 390]
+       519px, 0.58 screens; a section is exactly one or two (--h)
+       fix: make the section exactly one or two screens (--h: 1 or 2)
+  FAIL neighbour        section.section.wrap section.section.wrap "От идеи до последнего штриха01Зн"  [1440]
+       framed, 179px of section.portfolio-section.on-paper section.portfolio-section.on-paper "Интерьеры и решения.Наши работы " shows
+       fix: keep the next section's heading and picture out of this screen
+  FAIL screen-height    section.portfolio-section.on-paper section.portfolio-section.on-paper "Интерьеры и решения  [1440]
+       1019px, 1.13 screens; a section is exactly one or two (--h)
+       fix: make the section exactly one or two screens (--h: 1 or 2)
+  FAIL screen-short     section.section.wrap section.section.wrap "Отзывы о мебели.“Продумали хране"  [1440]
+       565px tall; one screen under the nav is 900px
+       fix: make the section one full screen (--h: 1, layout-v4.md section 2)
+  FAIL screen-height    section.section.wrap section.section.wrap "Отзывы о мебели.“Продумали хране"  [1440]
+       565px, 0.63 screens; a section is exactly one or two (--h)
+       fix: make the section exactly one or two screens (--h: 1 or 2)
+  FAIL neighbour        section.section.wrap section.section.wrap "Отзывы о мебели.“Продумали хране"  [1440]
+       framed, 126px of section.section.wrap section.section.wrap "Остались вопросы?Как формируется" shows
+       fix: keep the next section's heading and picture out of this screen
+  FAIL screen-height    section.section.wrap section.section.wrap "Остались вопросы?Как формируется"  [1440]
+       931px, 1.03 screens; a section is exactly one or two (--h)
+       fix: make the section exactly one or two screens (--h: 1 or 2)
+  FAIL hero-fold        section.hero section.hero "Мебельная фабрика · ТашкентМебел"  [1440, 390]
+       starts at y 80, not under the nav
+       fix: the hero fills the first screen alone, its button inside it
+  FAIL neighbour-ground section.section.wrap section.section.wrap "От идеи до последнего штриха01Зн"  [390]
+       framed, 54px of section.portfolio-section.on-paper section.portfolio-section.on-paper "Интерьеры и решения.Наши работы "'s ground shows
+       fix: end the ground with the section
+  FAIL neighbour        section.portfolio-section.on-paper section.portfolio-section.on-paper "Интерьеры и решения  [390]
+       framed, 52px of section.section.wrap section.section.wrap "Отзывы о мебели.“Продумали хране" shows
+       fix: keep the next section's heading and picture out of this screen
+  FAIL neighbour        section.section.wrap section.section.wrap "Остались вопросы?Как формируется"  [390]
+       framed, 263px of the footer shows
+       fix: keep the next section's heading and picture out of this screen
+  WAIVED nav header.header > nav.desktop-nav > a.roll-link:nth-of-type(1) "Н Н а а ш ш и и р : Roll Links uses two copies of each letter inside an overflow-hidden drum. Only one copy is visible; the navigation does not wrap. Retained from the user's DesignBookmark reference.
+  WAIVED nav header.header > nav.desktop-nav > a.roll-link:nth-of-type(2) "О О ф ф а а б б р : The second letter row is the clipped hover state of Roll Links, not a second visible navigation line. Confirmed in the desktop screenshot.
+  WAIVED nav header.header > nav.desktop-nav > a.roll-link:nth-of-type(3) "К К о о н н т т а : The repeated letters implement the requested Roll Links effect and are clipped to one line. The link has one accessible name.
+  WAIVED hero-enter main#main > section.hero: The existing Next.js page uses CSS hero-enter with staggered delays and prefers-reduced-motion, rather than the skill's m-enter head script. The entrance is implemented without hiding server-rendered content permanently.
+  20 WARN (not blocking), first: flush div.materials-strip > div.marquee-track ; caption main#main > section.portfolio-section.on; nav header.header > div.header-right > a.hea; card-layout main#main > section.section.wrap:nth-of-; copy-headline main#main > section.hero > div.hero-cont
+A FAIL you judge false: add {"check": "<id>", "target": "<its where, enough to name that one finding>", "reason": "<why, 12+ characters>"} to .taste-skill/waivers.json (one finding each, 5 at most, never for kit-edited or checker-gaming); it goes in your report. Never edit the kit's files or hide the page from the checker.
+GATE: FAIL 77 (round 2 of 3)
